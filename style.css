@@ -13,7 +13,13 @@ body {
   font-family: "Hanken Grotesk", sans-serif;
   /* font-family: 'Great Vibes', cursive; */
 }
+a {
+  text-decoration: none;
+}
 
+li {
+  list-style: none;
+}
 /*! NAVIGATION */
 nav {
   /* background-color: antiquewhite; */
@@ -101,4 +107,99 @@ nav {
   width: 1px;
   background-color: rgba(0, 0, 0, 0.3);
   height: 25px;
+}
+
+/* SHORT CATALOG */
+.sort-catalog-section {
+  width: 100%;
+  background-color: #c5c5c52f;
+  padding: 0.5rem 10rem;
+}
+
+.sort-catalog-section ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* font-size: ; */
+}
+
+.sort-catalog-section ul li a {
+  font-size: 1.2rem;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.sort-catalog-section ul li a:hover {
+  color: #ffc400;
+}
+
+.sort-catalog-section .full-btn {
+  font-weight: 900;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 0.3s ease;
+}
+
+.sort-catalog-section .full-btn:hover {
+  border-color: #ffc400;
+}
+
+/* SLIDER SECTION */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
