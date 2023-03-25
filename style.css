@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+* {
+  /* font-family: HK Grotesk; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  /* font-family: 'Great Vibes', cursive; */
+}
+
+/*! NAVIGATION */
+nav {
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem;
+  width: 100%;
+  border-bottom: 1px solid rgba(65, 65, 65, 0.3);
+}
+.logo-container {
+  /* background-color: aliceblue; */
+  width: 30%;
+}
+.logo-container h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+}
+
+.properties-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  /* background-color: rgb(19, 115, 199); */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 300px;
+  border: 2px solid #ffc400;
+  background: #ffc40028;
+  border-right: none;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  /* color: #9dbfaf; */
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+/* .searchTerm:focus {
+  color: #00b4cc;
+} */
+
+.searchButton {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #ffc400;
+  background: #ffc400;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.account-cart-container {
+  display: flex;
+  align-items: center;
+  /* background-color: aqua; */
+  justify-content: space-between;
+  align-items: center;
+  width: 23%;
+}
+
+.account-cart-container .sign-up i,
+.cart i {
+  margin-right: 10px;
+  color: #ffc400;
+}
+
+.account-cart-container .sign-up:hover,
+.cart:hover {
+  cursor: pointer;
+}
+
+.account-cart-container .vertical-line {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 25px;
+}
