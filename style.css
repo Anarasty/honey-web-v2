@@ -404,9 +404,14 @@ nav {
   /* width: 50%; */
   /* width: 100%; */
   /* background-color: #ffc400; */
-  border: 1px solid black;
+  border: 1px solid transparent;
   margin: 0px 1rem;
-  /* Добавьте стили, чтобы настроить внешний вид карточек товаров */
+  /* box-shadow: 0px 20px 50px -8px rgba(69, 78, 96, 0.15); */
+  transition: .3s ease;
+}
+
+.news-section .slider-item:hover {
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
 .news-section .slider-item img {
@@ -424,4 +429,9 @@ nav {
 .news-section .slider-item p {
   padding: .5rem 1rem;
   text-align: justify;
+}
+
+.news-section .slider-item .data-p {
+  float: right;
+  opacity: 0.6;
 }
