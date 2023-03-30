@@ -5,8 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honey</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
-    
+    <nav>
+        <div class="logo-container">
+          <h1>Honey Lab</h1>
+        </div>
+        <div class="properties-container">
+          <div class="wrap">
+            <div class="search">
+              <input
+                type="text"
+                class="searchTerm"
+                placeholder="What are you looking for?"
+              />
+              <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="account-cart-container">
+            <h3 class="sign-up">
+              <i class="fa-solid fa-user"></i> Sign Up / Sign In
+            </h3>
+            <div class="vertical-line"></div>
+            <h3 class="cart"><i class="fa-solid fa-cart-shopping"></i> Cart</h3>
+          </div>
+        </div>
+      </nav>
+
+      <section class="full-catalog-section">
+        <div class="main-content-box">
+            <div class="filters-box">
+                <a href="index.html" class="back"><i class="fa-solid fa-arrow-left"></i> Back</a>
+                <div class="line-horizontal"></div>
+                <ul id="category-list">Categories
+                    <li><a href="">Honey</a></li>
+                    <li><a href="">Cosmetics</a></li>
+                    <li><a href="">Mead</a></li>
+                    <li><a href="">Candles</a></li>
+                    <li><a href="">Bee venom</a></li>
+                    <li><a href="">Pollen</a></li>
+                    <li><a href="">All</a></li>
+                </ul>
+                <div class="line-horizontal"></div>
+                <ul>Offers
+                    <li><input type="checkbox" id="sale"><label for="sale">Sale</label></li>
+                    <li><input type="checkbox" id="limited"><label for="limited">Limited</label></li>
+                </ul>
+                <div class="line-horizontal"></div>
+                <p>Prices</p>
+                <select>
+                    <option value="small-to-high">Small to high</option>
+                    <option value="high-to-small">High to small</option>
+                </select>
+            </div>
+            <div class="products-box">
+                <div class="choosed-filters">
+                    <h2>Filters:</h2>
+                    <ul>
+                        <li>Filter1</li>
+                        <li>Filter2</li>
+                        <li>Filter3</li>
+                    </ul>
+                </div>
+
+                <div class="product-list" id="product-list"></div>
+            </div>
+        </div>
+      </section>
+
+
+
+      <script type="module" src="product.js"></script>
 </body>
 </html>
