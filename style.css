@@ -652,3 +652,7 @@ footer .copyright{
 .full-catalog-section .products-box .product-list img {
   width: 100%;
 }
+
+.selected {
+  background-color: #007bff;
+}
