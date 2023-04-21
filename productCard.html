@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="productDetails"></div>
+
+    <script type="module">
+      import products from "./data.js";
+      const productDetails = document.getElementById("productDetails");
+
+      function getProductById(id) {
+        return products.find((product) => product.id === id);
+      }
+
+      function displayProduct(product) {
+        productDetails.innerHTML = `
+          <div class="product-details">
+            <img src="${product.image}">
+            <h2>${product.name}</h2>
+            <p>${product.description}</p>
+            <p>Price: $${product.price.toFixed(2)}</p>
+          </div>
+        `;
+      }
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = parseInt(urlParams.get("id"));
+      const product = getProductById(productId);
+      displayProduct(product);
+    </script>
+  </body>
+</html>

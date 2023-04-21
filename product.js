@@ -61,7 +61,10 @@ const saleCheckbox = document.getElementById("sale");
 const limitedCheckbox = document.getElementById("limited");
 const priceSelect = document.querySelector("select");
 
-const resetButton = document.querySelector(".reset.filter");
+const resetButton = document.querySelector(".reset-filter");
+{
+  /* <a href="productCard.html" class="product-card-btn">Show product</a> */
+}
 
 function displayProducts(products) {
   productList.innerHTML = "";
@@ -70,8 +73,15 @@ function displayProducts(products) {
     productDiv.innerHTML = `<div class="product-card">
       <img src="${product.image}">
       <h2>${product.name}</h2>
-      <p>${product.description}</p>
-      <p>Price: $${product.price.toFixed(2)}</p>
+      <div class="card-price-box">
+        <p>$${product.price.toFixed(2)}</p>
+        <p class="new-price-txt">${product.onSale === true ? "$"+product.newPrice : ""}</p>
+      </div>
+      <p>${product.isLimited === true ? "Limited" : ""}</p>
+      <a href="productCard.html?id=${
+        product.id
+      }" class="product-card-btn">Show product</a>
+
     </div>`;
     productList.appendChild(productDiv);
   }
@@ -113,7 +123,7 @@ categoryList.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.nodeName === "A") {
     const selectedCategory = event.target.textContent;
-    categoryList.querySelectorAll("a").forEach((link) => {
+    categoryList.querySelectorAll("a.category-filter-link").forEach((link) => {
       link.classList.remove("selected");
     });
     event.target.classList.add("selected");
@@ -128,3 +138,40 @@ priceSelect.addEventListener("change", filterProducts);
 resetButton.addEventListener("click", resetFilters);
 
 displayProducts(products);
+
+const searchInput = document.getElementById("search-input");
+const searchResults = document.getElementById("search-results");
+
+searchInput.addEventListener("input", () => {
+  const searchQuery = searchInput.value.trim().toLowerCase();
+
+  // Если поле поиска пустое, скрываем область с результатами поиска
+  if (searchQuery === "") {
+    searchResults.style.display = "none";
+    return;
+  }
+
+  const filteredProducts = products.filter((product) => {
+    const productName = product.name.toLowerCase();
+    return productName.includes(searchQuery);
+  });
+
+  // Очищаем область с результатами поиска перед каждым новым поиском
+  searchResults.innerHTML = "block";
+
+  filteredProducts.forEach((product) => {
+    const productElement = document.createElement("div");
+    productElement.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <p>${product.name}</p>
+      `;
+    productElement.addEventListener("click", () => {
+      // При клике на элемент с результатом поиска переходим на карточку продукта
+      window.location.href = `productCard.html?id=${product.id}`;
+    });
+    searchResults.appendChild(productElement);
+  });
+
+  // Отображаем область с результатами поиска
+  searchResults.style.display = "block";
+});

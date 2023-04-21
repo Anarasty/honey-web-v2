@@ -37,6 +37,39 @@ const products = [
     newPrice: 28.99,
     onSale: false,
     image: "/images/pollen.jpg"
+  },
+  {
+    id: 4,
+    name: "Pollen",
+    category: "Pollen",
+    isLimited: true,
+    description: "Natural honey",
+    price: 30.99,
+    newPrice: 28.99,
+    onSale: false,
+    image: "/images/pollen.jpg"
+  },
+  {
+    id: 5,
+    name: "Pollen",
+    category: "Pollen",
+    isLimited: true,
+    description: "Natural honey",
+    price: 30.99,
+    newPrice: 28.99,
+    onSale: false,
+    image: "/images/pollen.jpg"
+  },
+  {
+    id: 6,
+    name: "Pollen",
+    category: "Pollen",
+    isLimited: true,
+    description: "Natural honey",
+    price: 30.99,
+    newPrice: 28.99,
+    onSale: false,
+    image: "/images/pollen.jpg"
   }
 ];
 

@@ -568,10 +568,20 @@ footer .copyright{
   font-weight: bolder;
 }
 .full-catalog-section .filters-box ul li a {
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 1.2rem;
   font-weight: 100;
+  transition: .3s ease;
 }
+.full-catalog-section .filters-box .selected {
+  /* background-color: #007bff; */
+  border: 1px solid black;
+  padding: 0 15px;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+
 .full-catalog-section .filters-box ul input[type=checkbox] {
   color: black;
   font-size: 1.2rem;
@@ -636,11 +646,39 @@ footer .copyright{
   outline: none;
 }
 
+.full-catalog-section .filters-box .reset-filter {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin: 30px 0;
+  border: 2px solid red;
+  color: red;  
+  padding: 5px 15px;
+  border-radius: 6px;
+  transition: .2s ease;
+  height: 50px;
+}
+
+.full-catalog-section .filters-box .reset-filter:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
 /* ? */
 .full-catalog-section .products-box {
   background-color: #f9f9f9;
-  width: 50%;
-  height: 100px;
+  width: 100%;
+  padding: 50px;
+  /* height: 100px; */
+  margin: 0 50px;
+  border-radius: 10px;
+}
+
+.full-catalog-section .products-box .minisection-name h2{
+  text-align: center;
+  color: black;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .full-catalog-section .products-box .product-list {
@@ -649,10 +687,37 @@ footer .copyright{
   grid-template-columns: repeat(4, 1fr);
 }
 
-.full-catalog-section .products-box .product-list img {
+.products-box .product-list .product-card img {
   width: 100%;
 }
 
-.selected {
-  background-color: #007bff;
+.products-box .product-list .product-card {
+  /* background-color: #007bff; */
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  /* height: 450px; */
+  
+}
+.products-box .product-list .product-card p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.products-box .product-list .product-card .card-price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-box .product-list .product-card .card-price-box .new-price-txt{
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+
+/* ! */
+.full-catalog-section {
+
 }
