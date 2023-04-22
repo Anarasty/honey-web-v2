@@ -10,6 +10,8 @@ const priceSelect = document.querySelector("select");
 const resetButton = document.querySelector(".reset-filter");
 {
   /* <a href="productCard.html" class="product-card-btn">Show product</a> */
+  // <p>$${product.price.toFixed(2)}</p>
+  //       <p class="new-price-txt">${product.onSale === true ? "$"+product.newPrice : ""}</p>
 }
 
 function displayProducts(products) {
@@ -20,8 +22,7 @@ function displayProducts(products) {
       <img src="${product.image}">
       <h2>${product.name}</h2>
       <div class="card-price-box">
-        <p>$${product.price.toFixed(2)}</p>
-        <p class="new-price-txt">${product.onSale === true ? "$"+product.newPrice : ""}</p>
+        ${product.onSale === true ? `<p style="text-decoration: line-through;">$${product.price.toFixed(2)}</p><p class="new-price-txt">$${product.newPrice.toFixed(2)}</p>` : `<p>$${product.price.toFixed(2)}</p>`}
       </div>
       <p class="limited-txt">${product.isLimited === true ? "Limited" : ""}</p>
       <a href="productCard.html?id=${

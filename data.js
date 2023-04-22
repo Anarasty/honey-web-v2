@@ -4,7 +4,8 @@ const products = [
     name: "Forest honey",
     category: "Honey",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 20.99,
     newPrice: 18.99,
     onSale: true,
@@ -15,7 +16,8 @@ const products = [
     name: "Honey candles",
     category: "Candles",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 10.99,
     newPrice: 8.99,
     onSale: false,
@@ -26,7 +28,8 @@ const products = [
     name: "Forest Honeycomb",
     category: "Other",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 52.39,
     newPrice: 48.11,
     onSale: false,
@@ -37,7 +40,8 @@ const products = [
     name: "Pollen 100g",
     category: "Pollen",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 30.99,
     newPrice: 28.99,
     onSale: false,
@@ -48,7 +52,8 @@ const products = [
     name: "Mead",
     category: "Mead",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 140.69,
     newPrice: 99.99,
     onSale: true,
@@ -59,7 +64,8 @@ const products = [
     name: "Royal milk",
     category: "Other",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 72.12,
     newPrice: 69.44,
     onSale: false,
@@ -70,7 +76,8 @@ const products = [
     name: "Honey soap",
     category: "Cosmetics",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 8.12,
     newPrice: 7.44,
     onSale: false,
@@ -81,7 +88,8 @@ const products = [
     name: "Eucalyptus honey",
     category: "Honey",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 20.22,
     newPrice: 18.98,
     onSale: false,
@@ -92,7 +100,8 @@ const products = [
     name: "Eucalyptus honeycomb",
     category: "Other",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 43.62,
     newPrice: 38.52,
     onSale: false,
@@ -103,7 +112,8 @@ const products = [
     name: "Bee venom",
     category: "Bee venom",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 31.51,
     newPrice: 28.81,
     onSale: true,
@@ -114,7 +124,8 @@ const products = [
     name: "Orange blossom honey",
     category: "Honey",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 24.11,
     newPrice: 20.67,
     onSale: false,
@@ -125,7 +136,8 @@ const products = [
     name: "Manuka honey",
     category: "Honey",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 13.87,
     newPrice: 10.54,
     onSale: false,
@@ -136,7 +148,8 @@ const products = [
     name: "Honey-crem",
     category: "Cosmetics",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 31.85,
     newPrice: 28.55,
     onSale: true,
@@ -147,7 +160,8 @@ const products = [
     name: "Face mask",
     category: "Cosmetics",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 29.66,
     newPrice: 27.13,
     onSale: false,
@@ -158,7 +172,8 @@ const products = [
     name: "Honey facial mask",
     category: "Cosmetics",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 32.23,
     newPrice: 30.99,
     onSale: false,
@@ -169,7 +184,8 @@ const products = [
     name: "Manuka honeycomb",
     category: "Other",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 30.31,
     newPrice: 25.55,
     onSale: true,
@@ -180,7 +196,8 @@ const products = [
     name: "Pollen 500g",
     category: "Pollen",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 150.17,
     newPrice: 145.88,
     onSale: false,
@@ -191,7 +208,8 @@ const products = [
     name: "Fiary mead",
     category: "Mead",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 170.86,
     newPrice: 160.11,
     onSale: true,
@@ -202,7 +220,8 @@ const products = [
     name: "Gosnells mead",
     category: "Mead",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 110.15,
     newPrice: 83.62,
     onSale: false,
@@ -213,7 +232,8 @@ const products = [
     name: "Homemade mead",
     category: "Mead",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 190.28,
     newPrice: 153.13,
     onSale: false,
@@ -224,7 +244,8 @@ const products = [
     name: "Honey scrub",
     category: "Cosmetics",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 84.69,
     newPrice: 78.66,
     onSale: false,
@@ -235,7 +256,8 @@ const products = [
     name: "Honey tree candle",
     category: "Candles",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 14.51,
     newPrice: 12.79,
     onSale: false,
@@ -246,7 +268,8 @@ const products = [
     name: "Honey heart candle",
     category: "Candles",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 15.12,
     newPrice: 13.91,
     onSale: true,
@@ -257,7 +280,8 @@ const products = [
     name: "Honey hive candle",
     category: "Candles",
     isLimited: false,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 17.72,
     newPrice: 15.44,
     onSale: false,
@@ -268,7 +292,8 @@ const products = [
     name: "Honey duo candle",
     category: "Candles",
     isLimited: true,
-    description: "Natural honey",
+    description:
+      "Our product is a natural honey, which is obtained from the flowers of various plants using traditional beekeeping methods. We guarantee the high quality of honey, because we do not use chemical additives or processing processes that can degrade the quality and usefulness of honey. Our honey is a source of vitamins and minerals as well as energy for your body. Try our natural honey and enjoy the real taste and benefits of nature!",
     price: 13.12,
     newPrice: 10.12,
     onSale: false,

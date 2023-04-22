@@ -32,16 +32,18 @@
   <body>
     <nav>
       <div class="logo-container">
-        <h1>Honey Lab</h1>
+        <h1><a href="index.html">Honey Lab</a></h1>
       </div>
       <div class="properties-container">
         <div class="wrap">
-          <div class="search">
+          <div class="search" style="visibility: hidden;">
             <input
               type="text"
               class="searchTerm"
               placeholder="What are you looking for?"
+              id="search-input"
             />
+            <div id="search-results" style="display:none;"></div>
             <button type="submit" class="searchButton">
               <i class="fa fa-search"></i>
             </button>
@@ -342,7 +344,7 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
       integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
