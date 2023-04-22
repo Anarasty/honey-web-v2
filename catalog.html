@@ -43,7 +43,7 @@
               placeholder="What are you looking for?"
               id="search-input"
             />
-            <div id="search-results"></div>
+            <div id="search-results" style="display:none;"></div>
             <button type="submit" class="searchButton">
               <i class="fa fa-search"></i>
             </button>
@@ -74,6 +74,7 @@
             <li><a href="" class="category-filter-link">Candles</a></li>
             <li><a href="" class="category-filter-link">Bee venom</a></li>
             <li><a href="" class="category-filter-link">Pollen</a></li>
+            <li><a href="" class="category-filter-link">Other</a></li>
             <li><a href="" class="category-filter-link">All</a></li>
           </ul>
           <div class="line-horizontal"></div>
@@ -91,6 +92,7 @@
           <div class="line-horizontal"></div>
           <p>Prices</p>
           <select id="select">
+            <option value="none">None</option>
             <option value="small-to-high">Small to high</option>
             <option value="high-to-small">High to small</option>
           </select>
@@ -103,6 +105,38 @@
         </div>
       </div>
     </section>
+
+
+    <footer>
+      <div class="main-info">
+        <div class="column">
+          <h1>Honey Lab</h1>
+        </div>
+        <div class="column">
+          <h3>About</h3>
+          <p>News</p>
+          <p>Contact</p>
+          <p>User agreement</p>
+          <p>Personal data policy</p>
+        </div>
+        <div class="column">
+          <h3>Customers</h3>
+          <p>Delivery and payment</p>
+          <p>Refund</p>
+          <p>Order</p>
+          <p>Q&A</p>
+        </div>
+        <div class="column">
+          <h3>Get in touch</h3>
+          <input type="email" placeholder="your mail">
+          <input type="submit" value="Submit" class="submit-btn">
+        </div>
+      </div>
+      <div class="line-horizontal"></div>
+      <div class="copyright">
+        <p>Honey Lab © 2023 All rights reserved. Reliance Retail Ltd.</p>
+      </div>
+    </footer>
 
     <script type="module" src="product.js"></script>
   </body>
