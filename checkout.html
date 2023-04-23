@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="checkoutItemsContainer"></div>
+    <div>Total: $<span id="totalPrice"></span></div>
+    <button id="completePurchaseButton">Complete Purchase</button>
+
+    <script>
+      const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+      const checkoutItemsContainer = document.getElementById(
+        "checkoutItemsContainer"
+      );
+      let checkoutItemsHTML = "";
+      let totalPrice = 0;
+
+      cartItems.forEach((item) => {
+        const price = item.onSale ? item.newPrice : item.price;
+        const quantity = item.quantity || 1;
+        totalPrice += price * quantity;
+
+        checkoutItemsHTML += `
+    <div class="checkout-item">
+      <img src="${item.image}" alt="${item.name}">
+      <div class="checkout-item-info">
+        <h3>${item.name}</h3>
+        <p>Price: $${price.toFixed(2)}</p>
+        <p>Quantity: ${quantity}</p>
+      </div>
+    </div>
+  `;
+      });
+
+      checkoutItemsContainer.innerHTML = checkoutItemsHTML;
+      document.getElementById("totalPrice").textContent = totalPrice.toFixed(2);
+
+      const completePurchaseButton = document.getElementById(
+        "completePurchaseButton"
+      );
+      completePurchaseButton.addEventListener("click", () => {
+        // Clear cart and redirect to success page
+        localStorage.removeItem("cart");
+        window.location.href = "/success.html";
+      });
+    </script>
+  </body>
+</html>

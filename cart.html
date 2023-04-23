@@ -41,6 +41,7 @@
     <!-- TEST CODE1 -->
     <div id="cartItemsContainer"></div>
     <div>Total: $<span id="totalPrice"></span></div>
+    <button id="checkoutButton">GO!</button>
 
     <script>
       const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
@@ -66,9 +67,8 @@
             <button class="minus-btn" data-id="${item.id}">-</button>
             <input type="text" value="${quantity}" readonly>
             <button class="plus-btn" data-id="${item.id}">+</button>
+            <button class="remove-btn" data-id="${item.id}">Remove</button>
           </div>
-          <button class="remove-btn" data-id="${item.id}">Remove</button>
-
         </div>
       </div>
     `;
@@ -91,9 +91,7 @@
           });
         });
 
-        //Add
-        // Add event listeners to plus and minus buttons
-        // Add event listeners to plus and minus buttons
+        // event listeners to plus and minus buttons
         const plusBtns = document.querySelectorAll(".plus-btn");
         plusBtns.forEach((btn) => {
           btn.addEventListener("click", () => {
@@ -122,6 +120,12 @@
           displayCartItems(JSON.parse(localStorage.getItem("cart")));
         }
       }
+
+      const checkoutButton = document.getElementById("checkoutButton");
+      checkoutButton.addEventListener("click", () => {
+        // Redirect to checkout page
+        window.location.href = "/checkout.html";
+      });
 
       displayCartItems(cartItems);
     </script>
