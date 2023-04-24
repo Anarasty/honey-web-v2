@@ -4,15 +4,119 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Honey</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
-    <h2>class1</h2>
-    <div id="cartItemsContainer"></div>
-    <div>Total: $<span id="totalPrice"></span></div>
-    <button id="checkoutButton">GO!</button>
+    <nav>
+      <div class="logo-container">
+        <h1><a href="index.html">Honey Lab</a></h1>
+      </div>
+      <div class="properties-container">
+        <div class="wrap">
+          <div class="search" style="visibility: hidden">
+            <input
+              type="text"
+              class="searchTerm"
+              placeholder="What are you looking for?"
+              id="search-input"
+            />
+            <div id="search-results" style="display: none"></div>
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="account-cart-container">
+          <h3 class="sign-up">
+            <i class="fa-solid fa-user"></i> Sign Up / Sign In
+          </h3>
+          <div class="vertical-line"></div>
+          <h3 class="cart">
+            <a href="cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+            >
+          </h3>
+        </div>
+      </div>
+    </nav>
 
+    <section class="cart-section">
+      <h2 class="section-title">CART</h2>
+      <div id="cartItemsContainer"></div>
+      <div class="total-container">Total: $<span id="totalPrice"></span></div>
+      <button id="checkoutButton">Checkout</button>
+    </section>
+
+    <footer>
+      <div class="main-info">
+        <div class="column">
+          <h1>Honey Lab</h1>
+        </div>
+        <div class="column">
+          <h3>About</h3>
+          <p>News</p>
+          <p>Contact</p>
+          <p>User agreement</p>
+          <p>Personal data policy</p>
+        </div>
+        <div class="column">
+          <h3>Customers</h3>
+          <p>Delivery and payment</p>
+          <p>Refund</p>
+          <p>Order</p>
+          <p>Q&A</p>
+        </div>
+        <div class="column">
+          <h3>Get in touch</h3>
+          <form
+            action="mailto:murloc.ninja16@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <textarea
+              name="message"
+              cols="23"
+              rows="3"
+              style="resize: none"
+            ></textarea>
+            <input
+              class="submit-btn"
+              type="submit"
+              name="submit"
+              value="Submit"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="line-horizontal"></div>
+      <div class="copyright">
+        <p>Honey Lab © 2023 All rights reserved. Reliance Retail Ltd.</p>
+      </div>
+    </footer>
     <script src="cartFunc.js"></script>
   </body>
 </html>
