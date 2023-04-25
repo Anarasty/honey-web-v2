@@ -36,14 +36,14 @@
       </div>
       <div class="properties-container">
         <div class="wrap">
-          <div class="search" style="visibility: hidden;">
+          <div class="search" style="visibility: hidden">
             <input
               type="text"
               class="searchTerm"
               placeholder="What are you looking for?"
               id="search-input"
             />
-            <div id="search-results" style="display:none;"></div>
+            <div id="search-results" style="display: none"></div>
             <button type="submit" class="searchButton">
               <i class="fa fa-search"></i>
             </button>
@@ -334,8 +334,24 @@
         </div>
         <div class="column">
           <h3>Get in touch</h3>
-          <input type="email" placeholder="your mail">
-          <input type="submit" value="Submit" class="submit-btn">
+          <form
+            action="mailto:murloc.ninja16@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <textarea
+              name="message"
+              cols="23"
+              rows="3"
+              style="resize: none"
+            ></textarea>
+            <input
+              class="submit-btn"
+              type="submit"
+              name="submit"
+              value="Submit"
+            />
+          </form>
         </div>
       </div>
       <div class="line-horizontal"></div>

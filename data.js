@@ -9,7 +9,7 @@ const products = [
     price: 20.99,
     newPrice: 18.99,
     onSale: true,
-    image: "/images/honey-in-jar.jpg",
+    image: "https://imgtr.ee/images/2023/04/24/8bwbl.jpg",
   },
   {
     id: 2,

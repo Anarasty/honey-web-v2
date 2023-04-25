@@ -22,7 +22,7 @@ function displayCartItems(items) {
 
     cartItemsHTML += `
       <div class="cart-item">
-        <img src="${item.image}" alt="${item.name}">
+        <img src="${item.imageUrl}" alt="${item.name}">
         <div class="cart-item-info">
           <h3>${item.name}</h3>
           <p>Price: $${price.toFixed(2)}</p>
@@ -49,6 +49,7 @@ function displayCartItems(items) {
         cartItems.splice(itemIndex, 1);
         localStorage.setItem("cart", JSON.stringify(cartItems));
         displayCartItems(cartItems);
+        location.reload();
       }
     });
   });

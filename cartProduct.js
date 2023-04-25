@@ -1,18 +1,18 @@
-import products from "./data.js";
+// import products from "./data.js";
 const productDetails = document.getElementById("productDetails");
 
-function getProductById(id) {
+function getProductById(id, products) {
   return products.find((product) => product.id === id);
 }
-// <p>SALE! ${product.onSale === true ? "$"+product.newPrice : "NOT SALE"}</p>
+
 function displayProduct(product) {
   productDetails.innerHTML = `
           <div class="product-details">
-            <img src="${product.image}">
+            <img src="${product.imageUrl}">
             <div class="product-info-section">
               <h2>${product.name}</h2>
               <p>${product.description}</p>
-              <p class="category-txt">Category: ${product.category}</p>
+              <p class="category-txt">Category: ${product.categoryName}</p>
             <div class="price-box">${
               product.onSale === true
                 ? `<p>Price: <span style="text-decoration: line-through;">$${product.price.toFixed(
@@ -26,14 +26,8 @@ function displayProduct(product) {
         `;
 }
 
-const urlParams = new URLSearchParams(window.location.search);
-const productId = parseInt(urlParams.get("id"));
-const product = getProductById(productId);
-displayProduct(product);
-
-const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-
 function addToCart(product) {
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
   const isItemInCart = cartItems.some((item) => item.id === product.id);
   if (!isItemInCart) {
     cartItems.push(product);
@@ -41,7 +35,23 @@ function addToCart(product) {
   }
 }
 
-const addToCartButton = document.querySelector(".add-to-cart-btn");
-addToCartButton.addEventListener("click", () => {
-  addToCart(product);
-});
+function getProductData() {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "http://localhost:8080/product/all", true);
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      const products = JSON.parse(xhr.responseText);
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = parseInt(urlParams.get("id"));
+      const product = getProductById(productId, products);
+      displayProduct(product);
+      const addToCartButton = document.querySelector(".add-to-cart-btn");
+      addToCartButton.addEventListener("click", () => {
+        addToCart(product);
+      });
+    }
+  };
+  xhr.send();
+}
+
+getProductData();
