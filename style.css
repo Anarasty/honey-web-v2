@@ -1205,3 +1205,72 @@ p {
   margin: 20px 0;
   line-height: 40px;
 }
+
+/* ?REGISTRATION + LOGIN!*/
+.registration-section {
+  width: 80%;
+  margin: 40px auto;
+  background-color: #c4c4c48a;
+  min-height: 70vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  border-radius: 10px;
+}
+
+.registration-section  .reg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  /* background-color: #007bff; */
+}
+
+.registration-section  .reg-container h2 {
+  font-size: 3rem;
+  color: black;
+  margin: 10px auto 30px;
+}
+
+.registration-section .reg-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-section .reg-container form label {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.registration-section .reg-container form input {
+  font-size: 1.3rem;
+  font-family: "Hanken Grotesk", sans-serif;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.registration-section .reg-container form input[type="submit"] {
+  margin: 20px 0;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  font-family: "Hanken Grotesk", sans-serif;
+  letter-spacing: 4px;
+  transition: .3s ease;
+}
+
+.registration-section .reg-container form input[type="submit"]:hover {
+  background-color: white;
+  color: black;
+}
+
+/* SECONDARY */
+.user-name:hover {
+  cursor: pointer;
+}

@@ -29,11 +29,10 @@
       referrerpolicy="no-referrer"
     />
   </head>
-
   <body>
     <nav>
       <div class="logo-container">
-        <h1><a href="index.html">Honey Lab</a></h1>
+        <h1><a href="">Honey Lab</a></h1>
       </div>
       <div class="properties-container">
         <div class="wrap">
@@ -51,11 +50,11 @@
           </div>
         </div>
         <div class="account-cart-container">
-          <h3 class="sign-up">
+          <h3 class="sign-up" style="visibility: hidden;">
             <i class="fa-solid fa-user"></i> Sign Up / Sign In
           </h3>
-          <div class="vertical-line"></div>
-          <h3 class="cart">
+          <div class="vertical-line" style="visibility: hidden;"></div>
+          <h3 class="cart" style="visibility: hidden;">
             <a href="cart.html"
               ><i class="fa-solid fa-cart-shopping"></i> Cart</a
             >
@@ -63,62 +62,26 @@
         </div>
       </div>
     </nav>
-
-    <section class="checkout-section">
-      <h3 class="order-items-txt">Order Items</h3>
-      <div id="checkoutItemsContainer"></div>
-      <div class="order-properties">
+    <section class="registration-section">
+      <div class="reg-container">
+        <h2>Registration</h2>
         <form>
-          <div class="name-labels-container">
-            <label for="username">First name:</label>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              autocomplete="off"
-            />
-            <br />
-            <label for="usersurname">Last name:</label>
-            <input
-              type="text"
-              name="usersurname"
-              id="usersurname"
-              autocomplete="off"
-            />
-            <br />
-          </div>
-          <div class="select-containers">
-            <label for="select_payment">Payment</label>
-            <select id="select_payment">
-              <option value="paypal">Paypal</option>
-              <option value="stripe">Stripe</option>
-              <option value="privat24">Privat24</option>
-              <option value="bankcard">Card</option>
-            </select>
-            <br />
-            <label for="select_shipping">Shipping</label>
-            <select id="select_shipping">
-              <option value="novapochta">Nova pochta</option>
-              <option value="ukrpochta">Ukr pochta</option>
-              <option value="curier">Curier</option>
-              <option value="selfdelivery">Self-delivery</option>
-            </select>
-          </div>
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName" autocomplete="off" required />
+          <label for="lastName">Last name</label>
+          <input type="text" id="lastName" autocomplete="off" required />
+          <br />
+          <label for="email">Email</label>
+          <input type="email" id="email" autocomplete="off" required />
+          <label for="password">Password</label>
+          <input type="password" id="password" autocomplete="off" required />
+          <input type="submit" id="submitReg" value="Register" />
         </form>
-      </div>
-      <div class="total-container">Total: $<span id="totalPrice"></span></div>
-      <button onclick="openPopup()" id="completePurchaseButton">
-        Complete Purchase
-      </button>
-
-      <div id="popup" class="popup">
-        <div class="popup-content">
-          <span class="close" onclick="closePopup()">&times;</span>
-          <h1>Thank you for the purchase! Have a good day.</h1>
-        </div>
+        <a style="text-decoration: underline" href="login.html"
+            >Already registered? Login!</a
+          >
       </div>
     </section>
-
     <footer>
       <div class="main-info">
         <div class="column">
@@ -129,7 +92,11 @@
           <p>News</p>
           <p>Contact</p>
           <p>User agreement</p>
-          <p><a style="color:black;" href="privacyPolicy.html">Personal data policy</a></p>
+          <p>
+            <a style="color: black" href="privacyPolicy.html"
+              >Personal data policy</a
+            >
+          </p>
         </div>
         <div class="column">
           <h3>Customers</h3>
@@ -166,7 +133,38 @@
       </div>
     </footer>
 
-    <script src="checkout.js"></script>
-    <script src="loginLogout.js"></script>
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Остановить отправку формы по умолчанию
+
+          const firstName = document.getElementById("firstName").value;
+          const lastName = document.getElementById("lastName").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          // Отправляем POST-запрос на сервер
+          fetch("http://localhost:8080/user/signUp", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              firstName: firstName,
+              lastName: lastName,
+              email: email,
+              password: password,
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              // Действия после успешной регистрации пользователя
+              window.location.href = "login.html"; // Перенаправление пользователя на страницу логина
+            })
+            .catch((error) => console.error(error));
+        });
+    </script>
   </body>
 </html>

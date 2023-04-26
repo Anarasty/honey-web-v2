@@ -28,6 +28,7 @@ document.getElementById("totalPrice").textContent = totalPrice.toFixed(2);
 const completePurchaseButton = document.getElementById(
   "completePurchaseButton"
 );
+
 function clearLocalStorage() {
   localStorage.removeItem("cart");
 }
@@ -35,6 +36,30 @@ function clearLocalStorage() {
 document
   .getElementById("completePurchaseButton")
   .addEventListener("click", function () {
+    cartItems.forEach((item) => {
+      // const url = "http://localhost:8080/cart/addProduct?token=33c154bc-b226-4f54-b939-9ef49cd8b93e";
+      const token = localStorage.getItem("token");
+      const url = `http://localhost:8080/cart/addProduct?token=${token}`;
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "accept": "*/*"
+        },
+        body: JSON.stringify({
+          productId: item.id,
+          quantity: item.quantity
+        })
+      };
+
+      fetch(url, options)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => console.log(error));
+    });
+
     openPopup();
     clearLocalStorage();
   });
