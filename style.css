@@ -133,6 +133,11 @@ nav {
 }
 
 .account-cart-container .sign-up i,
+.cart a {
+  color: black;
+}
+
+.account-cart-container .sign-up i,
 .cart i {
   margin-right: 10px;
   color: #ffc400;
@@ -447,6 +452,8 @@ nav {
   margin: 0px 1rem;
   /* box-shadow: 0px 20px 50px -8px rgba(69, 78, 96, 0.15); */
   transition: 0.3s ease;
+  height: 850px;
+  position: relative;
 }
 
 .news-section .slider-item:hover {
@@ -471,8 +478,11 @@ nav {
 }
 
 .news-section .slider-item .data-p {
-  float: right;
+  /* float: right; */
   opacity: 0.6;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 footer {
@@ -1078,15 +1088,15 @@ p {
 .checkout-section #checkoutItemsContainer .checkout-item .checkout-item-info {
   display: flex;
   align-items: center;
-  justify-content: space-around; 
-  width: 100%; 
+  justify-content: space-around;
+  width: 100%;
 }
 
 .checkout-section #checkoutItemsContainer .checkout-item img {
   width: 80px;
 }
 
-.checkout-section .order-properties form{
+.checkout-section .order-properties form {
   /* background: #007bff; */
   width: 50%;
   display: flex;
@@ -1094,7 +1104,7 @@ p {
   justify-content: space-between;
 }
 
-.checkout-section .order-properties form .name-labels-container label{
+.checkout-section .order-properties form .name-labels-container label {
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -1106,7 +1116,7 @@ p {
   border-radius: 5px;
 }
 
-.checkout-section .order-properties form .select-containers label{
+.checkout-section .order-properties form .select-containers label {
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -1137,7 +1147,7 @@ p {
   border: 1px solid black;
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 600;
-  transition: .3s ease;
+  transition: 0.3s ease;
   letter-spacing: 2px;
   border-radius: 10px;
 }
@@ -1158,7 +1168,7 @@ p {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .popup-content {
@@ -1182,4 +1192,16 @@ p {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/*! PRIVACY POLICY SECTION */
+
+#policy-section-main {
+  width: 80%;
+  margin: 40px auto;
+}
+
+#policy-section-main h1, #policy-section-main p {
+  margin: 20px 0;
+  line-height: 40px;
 }
